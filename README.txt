@@ -53,12 +53,22 @@ CUM PORNESC PROIECTUL
 7. Deschid in browser adresa http://localhost:8000
 
 
+NOTA pentru Windows / PowerShell
+Daca la pasul 1 comanda "env\Scripts\activate" iti da o eroare ca scripturile
+sunt blocate, ai doua variante simple:
+- folosesti Command Prompt (cmd) in loc de PowerShell, unde activate merge, SAU
+- nu mai activezi deloc si scrii "env\Scripts\python.exe" in loc de "python" la
+  comenzile de mai sus. Exemplu: env\Scripts\python.exe manage.py runserver
+
+
 CHEIA PENTRU VREME (OpenWeatherMap)
 Ca sa apara vremea am nevoie de o cheie gratuita de la openweathermap.org
 (imi fac cont, intru la sectiunea API keys si copiez cheia).
-Pun cheia in fisierul pitcast/settings.py la linia:
-      OPENWEATHER_API_KEY = ''
-Daca las cheia goala, site-ul merge normal, doar ca in loc de vreme scrie
+Cheia nu este pusa in cod, ca sa nu ajunga publica pe GitHub.
+Ca sa merga vremea, creez un fisier nou numit pitcast/cheie_locala.py
+si scriu in el o singura linie:
+      OPENWEATHER_API_KEY = 'cheia_mea_aici'
+Daca nu pun nicio cheie, site-ul merge normal, doar ca in loc de vreme scrie
 "Vremea nu este disponibila momentan".
 
 
