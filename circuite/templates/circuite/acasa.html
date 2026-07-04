@@ -1,4 +1,5 @@
 {% extends 'circuite/base.html' %}
+{% load static %}
 
 {% block continut %}
 
@@ -22,7 +23,11 @@
         {% for circuit in circuite %}
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="{{ circuit.imagine_url }}" class="card-img-top" alt="{{ circuit.nume }}">
+                    {% if 'http' in circuit.imagine_url %}
+                        <img src="{{ circuit.imagine_url }}" class="card-img-top" alt="{{ circuit.nume }}">
+                    {% else %}
+                        <img src="{% static circuit.imagine_url %}" class="card-img-top" alt="{{ circuit.nume }}">
+                    {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">{{ circuit.nume }}</h5>
                         <p class="card-text">{{ circuit.oras }}, {{ circuit.tara }}</p>

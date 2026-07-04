@@ -2,6 +2,7 @@
 # ca sa nu le adaug pe toate de mana din admin
 # sunt toate cele 22 de curse din calendarul de formula 1 din 2026, in ordine
 # (Bahrain si Arabia Saudita au fost anulate, asa au ramas 22 in loc de 24)
+# la imagine_url pun calea catre poza din folderul static
 # il pornesc cu: python incarca_date.py
 
 import os
@@ -29,7 +30,7 @@ circuit1 = models.Circuit.objects.create(
     numar_viraje=14,
     an_prima_cursa=1996,
     istorie='Este un circuit facut in jurul unui lac dintr-un parc din Melbourne. Doar in weekendul cursei se transforma in pista de formula 1, in rest e drum normal.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Melbourne',
+    imagine_url='circuite/img/Melbourne.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit1,
@@ -49,7 +50,7 @@ circuit2 = models.Circuit.objects.create(
     numar_viraje=16,
     an_prima_cursa=2004,
     istorie='Are un viraj lung in forma de melc chiar la inceput, care se strange tot mai mult. Prima cursa aici a fost in 2004 si are o linie dreapta foarte lunga.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Shanghai',
+    imagine_url='circuite/img/Shanghai.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit2,
@@ -69,7 +70,7 @@ circuit3 = models.Circuit.objects.create(
     numar_viraje=18,
     an_prima_cursa=1987,
     istorie='Este iubit de aproape toti pilotii pentru ca e greu si tehnic. Are forma de opt, adica pista trece pe deasupra ei insasi, ceva rar la circuitele de formula 1.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Suzuka',
+    imagine_url='circuite/img/Suzuka.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit3,
@@ -89,7 +90,7 @@ circuit4 = models.Circuit.objects.create(
     numar_viraje=19,
     an_prima_cursa=2022,
     istorie='Este construit in jurul stadionului echipei de fotbal american Miami Dolphins. E un circuit nou, cu multa atmosfera si multe vedete in tribune.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Miami',
+    imagine_url='circuite/img/Miami.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit4,
@@ -109,7 +110,7 @@ circuit5 = models.Circuit.objects.create(
     numar_viraje=14,
     an_prima_cursa=1978,
     istorie='Este pe o insula artificiala din Montreal si poarta numele unui pilot canadian iubit. Are un zid faimos numit Zidul Campionilor, in care au intrat multi piloti mari.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Montreal',
+    imagine_url='circuite/img/Montreal.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit5,
@@ -129,7 +130,7 @@ circuit6 = models.Circuit.objects.create(
     numar_viraje=19,
     an_prima_cursa=1950,
     istorie='Este cea mai celebra cursa din tot sezonul. Se merge pe strazile inguste din Monte Carlo, printre cladiri si langa port. Depasirile sunt aproape imposibile aici.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Monaco',
+    imagine_url='circuite/img/Monaco.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit6,
@@ -149,7 +150,7 @@ circuit7 = models.Circuit.objects.create(
     numar_viraje=16,
     an_prima_cursa=1991,
     istorie='Este circuitul pe care echipele il cunosc cel mai bine, pentru ca aici se fac multe teste inainte de sezon. Are de toate: viraje rapide, viraje lente si o linie dreapta lunga.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Barcelona',
+    imagine_url='circuite/img/Barcelona.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit7,
@@ -169,7 +170,7 @@ circuit8 = models.Circuit.objects.create(
     numar_viraje=10,
     an_prima_cursa=1970,
     istorie='Este un circuit scurt, asezat printre dealurile din Austria. Se termina repede un tur, asa ca masinile trec des unele pe langa altele.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Spielberg',
+    imagine_url='circuite/img/Spielberg.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit8,
@@ -189,7 +190,7 @@ circuit9 = models.Circuit.objects.create(
     numar_viraje=18,
     an_prima_cursa=1950,
     istorie='Aici s-a alergat prima cursa din istoria campionatului mondial de formula 1, in 1950. E construit pe un fost aerodrom si are viraje foarte rapide.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Silverstone',
+    imagine_url='circuite/img/Silverstone.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit9,
@@ -209,7 +210,7 @@ circuit10 = models.Circuit.objects.create(
     numar_viraje=19,
     an_prima_cursa=1950,
     istorie='Este cel mai lung circuit din calendar si e asezat printre dealuri si paduri. Are virajul Eau Rouge, unul dintre cele mai tari viraje din toata lumea. Aici ploua des.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Spa',
+    imagine_url='circuite/img/Spa.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit10,
@@ -229,7 +230,7 @@ circuit11 = models.Circuit.objects.create(
     numar_viraje=14,
     an_prima_cursa=1986,
     istorie='Este un circuit stramt si plin de viraje, unde e greu sa depasesti. De multe ori e foarte cald aici in mijlocul verii.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Budapesta',
+    imagine_url='circuite/img/Budapesta.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit11,
@@ -249,7 +250,7 @@ circuit12 = models.Circuit.objects.create(
     numar_viraje=14,
     an_prima_cursa=1952,
     istorie='Este langa mare, printre dune de nisip din Olanda. Are viraje inclinate, ca la ovalele americane, care ajuta masinile sa treaca mai repede prin ele.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Zandvoort',
+    imagine_url='circuite/img/Zandvoort.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit12,
@@ -269,7 +270,7 @@ circuit13 = models.Circuit.objects.create(
     numar_viraje=11,
     an_prima_cursa=1950,
     istorie='Este numit Templul Vitezei pentru ca aici se ating cele mai mari viteze din sezon. Fanii echipei Ferrari, numiti tifosi, umplu tribunele in fiecare an.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Monza',
+    imagine_url='circuite/img/Monza.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit13,
@@ -289,7 +290,7 @@ circuit14 = models.Circuit.objects.create(
     numar_viraje=22,
     an_prima_cursa=2026,
     istorie='Este cel mai nou circuit din calendar si debuteaza chiar in 2026. Este un amestec de strazi si portiuni de circuit, langa targul IFEMA din Madrid.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Madrid',
+    imagine_url='circuite/img/Madrid.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit14,
@@ -309,7 +310,7 @@ circuit15 = models.Circuit.objects.create(
     numar_viraje=20,
     an_prima_cursa=2016,
     istorie='Este un circuit de strada prin orasul vechi. Are o linie dreapta foarte lunga langa mare si o portiune ingusta pe langa un castel vechi.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Baku',
+    imagine_url='circuite/img/Baku.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit15,
@@ -329,7 +330,7 @@ circuit16 = models.Circuit.objects.create(
     numar_viraje=19,
     an_prima_cursa=2008,
     istorie='A fost prima cursa de formula 1 care s-a alergat noaptea, sub lumini. Se merge pe strazile orasului, iar caldura si umezeala fac cursa foarte grea pentru piloti.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Singapore',
+    imagine_url='circuite/img/Singapore.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit16,
@@ -349,7 +350,7 @@ circuit17 = models.Circuit.objects.create(
     numar_viraje=20,
     an_prima_cursa=2012,
     istorie='Are un deal abrupt chiar la primul viraj, de unde ai o priveliste peste tot circuitul. Cateva viraje sunt copiate dupa cele mai tari viraje din alte circuite din lume.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Austin',
+    imagine_url='circuite/img/Austin.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit17,
@@ -369,7 +370,7 @@ circuit18 = models.Circuit.objects.create(
     numar_viraje=17,
     an_prima_cursa=1963,
     istorie='Este asezat foarte sus fata de nivelul marii, iar aerul rarefiat face masinile sa se comporte ciudat. Are o portiune spectaculoasa care trece printr-un stadion plin de fani.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Mexico+City',
+    imagine_url='circuite/img/Mexico.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit18,
@@ -389,7 +390,7 @@ circuit19 = models.Circuit.objects.create(
     numar_viraje=15,
     an_prima_cursa=1973,
     istorie='Se merge invers fata de acele ceasului si pista urca si coboara tot timpul. Aici s-au vazut unele dintre cele mai nebune curse din istorie, mai ales cand ploua.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Sao+Paulo',
+    imagine_url='circuite/img/SaoPaulo.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit19,
@@ -409,7 +410,7 @@ circuit20 = models.Circuit.objects.create(
     numar_viraje=17,
     an_prima_cursa=2023,
     istorie='Se alearga noaptea chiar pe faimosul bulevard Strip, printre cazinouri si lumini. Masinile ating viteze foarte mari pe liniile drepte lungi.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Las+Vegas',
+    imagine_url='circuite/img/LasVegas.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit20,
@@ -429,7 +430,7 @@ circuit21 = models.Circuit.objects.create(
     numar_viraje=16,
     an_prima_cursa=2021,
     istorie='Se alearga noaptea sub lumini, in desert. Este un circuit rapid, cu multe viraje lungi care ii obosesc mult pe piloti.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Lusail',
+    imagine_url='circuite/img/Lusail.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit21,
@@ -449,7 +450,7 @@ circuit22 = models.Circuit.objects.create(
     numar_viraje=16,
     an_prima_cursa=2009,
     istorie='De obicei aici se incheie sezonul. Cursa incepe la apus si se termina noaptea, iar circuitul trece pe langa un hotel spectaculos si un port cu iahturi.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Abu+Dhabi',
+    imagine_url='circuite/img/AbuDhabi.png',
 )
 models.MarePremiu.objects.create(
     circuit=circuit22,

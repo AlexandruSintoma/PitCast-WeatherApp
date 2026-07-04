@@ -1,4 +1,5 @@
 {% extends 'circuite/base.html' %}
+{% load static %}
 
 {% block continut %}
 
@@ -10,7 +11,11 @@
     <div class="row">
         <!-- in stanga pun imaginea si datele circuitului -->
         <div class="col-md-7">
-            <img src="{{ circuit.imagine_url }}" class="img-fluid rounded mb-3" alt="{{ circuit.nume }}">
+            {% if 'http' in circuit.imagine_url %}
+                <img src="{{ circuit.imagine_url }}" class="img-fluid rounded mb-3" alt="{{ circuit.nume }}">
+            {% else %}
+                <img src="{% static circuit.imagine_url %}" class="img-fluid rounded mb-3" alt="{{ circuit.nume }}">
+            {% endif %}
 
             <div class="card mb-3">
                 <div class="card-body">
