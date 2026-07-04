@@ -1,0 +1,36 @@
+{% extends 'circuite/base.html' %}
+
+{% block continut %}
+
+    <h1 class="titlu-mare mb-3">Calendarul curselor 2026</h1>
+    <p>Toate marile premii din sezon, in ordinea rundelor.</p>
+
+    <!-- pun cursele intr-un tabel bootstrap -->
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Runda</th>
+                <th>Marele Premiu</th>
+                <th>Circuit</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cursa in curse %}
+                <tr>
+                    <td>{{ cursa.runda }}</td>
+                    <td>{{ cursa.nume }}</td>
+                    <td>
+                        <a href="{% url 'detalii' cursa.circuit.id %}" style="color:#e10600;">{{ cursa.circuit.nume }}</a>
+                    </td>
+                    <td>{{ cursa.data_cursei }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% if not curse %}
+        <p>Nu e nicio cursa adaugata inca.</p>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'circuite/base.html' %}
+
+{% block continut %}
+
+    <h1 class="titlu-mare mb-2">Circuitele Formula 1 din 2026</h1>
+    <p class="mb-4">Vezi vremea de acum si povestea fiecarui circuit din sezon.</p>
+
+    <!-- bara de cautare, trimite prin get parametrul cauta -->
+    <form method="get" action="{% url 'acasa' %}" class="mb-4">
+        <div class="row">
+            <div class="col-9">
+                <input type="text" name="cauta" class="form-control" placeholder="Cauta un circuit dupa nume" value="{{ cautare }}">
+            </div>
+            <div class="col-3">
+                <button type="submit" class="btn buton-rosu w-100">Cauta</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- aici pun toate circuitele in carduri, cate 3 pe rand -->
+    <div class="row">
+        {% for circuit in circuite %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{{ circuit.imagine_url }}" class="card-img-top" alt="{{ circuit.nume }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ circuit.nume }}</h5>
+                        <p class="card-text">{{ circuit.oras }}, {{ circuit.tara }}</p>
+                        <p class="card-text">Lungime: {{ circuit.lungime_km }} km</p>
+                        <p class="card-text">Viraje: {{ circuit.numar_viraje }}</p>
+                        <a href="{% url 'detalii' circuit.id %}" class="btn buton-rosu">Vezi circuitul</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- daca nu am gasit niciun circuit scriu un mesaj -->
+    {% if not circuite %}
+        <p>Nu am gasit niciun circuit.</p>
+    {% endif %}
+
+{% endblock %}

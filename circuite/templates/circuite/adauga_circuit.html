@@ -1,0 +1,21 @@
+{% extends 'circuite/base.html' %}
+
+{% block continut %}
+
+    <a href="{% url 'acasa' %}" class="btn buton-rosu mb-3">Inapoi la circuite</a>
+
+    <h1 class="titlu-mare mb-3">Adauga un circuit nou</h1>
+    <p>Completeaza datele si circuitul apare pe prima pagina.</p>
+
+    <div class="card">
+        <div class="card-body">
+            <!-- formularul de circuit, il randez cu as_p -->
+            <form method="post">
+                {% csrf_token %}
+                {{ formular.as_p }}
+                <button type="submit" class="btn buton-rosu">Salveaza circuitul</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

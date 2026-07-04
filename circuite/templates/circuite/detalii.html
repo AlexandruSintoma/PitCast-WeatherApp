@@ -1,0 +1,89 @@
+{% extends 'circuite/base.html' %}
+
+{% block continut %}
+
+    <a href="{% url 'acasa' %}" class="btn buton-rosu mb-3">Inapoi la circuite</a>
+
+    <h1 class="titlu-mare">{{ circuit.nume }}</h1>
+    <p>{{ circuit.oras }}, {{ circuit.tara }}</p>
+
+    <div class="row">
+        <!-- in stanga pun imaginea si datele circuitului -->
+        <div class="col-md-7">
+            <img src="{{ circuit.imagine_url }}" class="img-fluid rounded mb-3" alt="{{ circuit.nume }}">
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h4>Date despre circuit</h4>
+                    <p>Lungime: {{ circuit.lungime_km }} km</p>
+                    <p>Numar de viraje: {{ circuit.numar_viraje }}</p>
+                    <p>Prima cursa aici: {{ circuit.an_prima_cursa }}</p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h4>Povestea circuitului</h4>
+                    <p>{{ circuit.istorie }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- in dreapta pun vremea de acum si cursele -->
+        <div class="col-md-5">
+            <div class="card card-vreme mb-3">
+                <div class="card-body">
+                    <h4 class="titlu-mare">Vremea acum</h4>
+                    {% if avem_vreme %}
+                        <p style="font-size: 40px;">{{ vreme.temperatura }} grade C</p>
+                        <p>Cer: {{ vreme.descriere }}</p>
+                        <p>Umiditate: {{ vreme.umiditate }} %</p>
+                        <p>Vant: {{ vreme.vant }} m/s</p>
+                    {% else %}
+                        <p>Vremea nu este disponibila momentan.</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h4>Marele Premiu 2026</h4>
+                    {% for premiu in marile_premii %}
+                        <p>Runda {{ premiu.runda }}: {{ premiu.nume }} - {{ premiu.data_cursei }}</p>
+                    {% endfor %}
+                    {% if not marile_premii %}
+                        <p>Nu e nicio cursa adaugata pentru acest circuit.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- partea cu comentarii -->
+    <h3 class="titlu-mare mt-4">Parerile vizitatorilor</h3>
+
+    {% for comentariu in comentarii %}
+        <div class="card mb-2">
+            <div class="card-body">
+                <strong>{{ comentariu.nume_vizitator }}</strong>
+                <p class="mb-0">{{ comentariu.mesaj }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    {% if not comentarii %}
+        <p>Nu e niciun comentariu inca. Fii primul!</p>
+    {% endif %}
+
+    <!-- formularul prin care las un comentariu nou -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h4>Lasa un comentariu</h4>
+            <form action="{% url 'adauga_comentariu' circuit.id %}" method="post">
+                {% csrf_token %}
+                {{ formular.as_p }}
+                <button type="submit" class="btn buton-rosu">Trimite comentariul</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

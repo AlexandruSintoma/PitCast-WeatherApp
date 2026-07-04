@@ -1,0 +1,9 @@
+# mediul virtual, nu il urc pe github
+env/
+
+# baza de date sqlite, se face din nou cu migrate + incarca_date.py
+db.sqlite3
+
+# fisiere generate de python
+__pycache__/
+*.pyc
