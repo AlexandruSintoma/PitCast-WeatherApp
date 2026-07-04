@@ -1,6 +1,7 @@
 # scriptul asta il rulez o singura data ca sa pun circuitele in baza de date
 # ca sa nu le adaug pe toate de mana din admin
-# sunt toate cele 24 de curse din calendarul de formula 1 din 2026, in ordine
+# sunt toate cele 22 de curse din calendarul de formula 1 din 2026, in ordine
+# (Bahrain si Arabia Saudita au fost anulate, asa au ramas 22 in loc de 24)
 # il pornesc cu: python incarca_date.py
 
 import os
@@ -77,48 +78,8 @@ models.MarePremiu.objects.create(
     data_cursei=date(2026, 3, 29),
 )
 
-# Runda 4 - Bahrain
+# Runda 4 - Statele Unite (Miami)
 circuit4 = models.Circuit.objects.create(
-    nume='Bahrain International Circuit',
-    tara='Bahrain',
-    oras='Sakhir',
-    latitudine=26.0325,
-    longitudine=50.5106,
-    lungime_km=5.412,
-    numar_viraje=15,
-    an_prima_cursa=2004,
-    istorie='Construit in mijlocul desertului, este un circuit iubit de echipe pentru ca aici se fac multe teste. Se alearga seara, sub lumini, iar nisipul de langa pista face totul mai spectaculos.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Bahrain',
-)
-models.MarePremiu.objects.create(
-    circuit=circuit4,
-    nume='Marele Premiu al Bahrainului',
-    runda=4,
-    data_cursei=date(2026, 4, 12),
-)
-
-# Runda 5 - Arabia Saudita
-circuit5 = models.Circuit.objects.create(
-    nume='Jeddah Corniche Circuit',
-    tara='Arabia Saudita',
-    oras='Jeddah',
-    latitudine=21.6319,
-    longitudine=39.1044,
-    lungime_km=6.174,
-    numar_viraje=27,
-    an_prima_cursa=2021,
-    istorie='Este cel mai rapid circuit de strada din calendar. Trece pe langa malul marii si are foarte multe viraje rapide, unde nu prea ai loc de greseli.',
-    imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Jeddah',
-)
-models.MarePremiu.objects.create(
-    circuit=circuit5,
-    nume='Marele Premiu al Arabiei Saudite',
-    runda=5,
-    data_cursei=date(2026, 4, 19),
-)
-
-# Runda 6 - Statele Unite (Miami)
-circuit6 = models.Circuit.objects.create(
     nume='Miami International Autodrome',
     tara='Statele Unite',
     oras='Miami',
@@ -131,14 +92,14 @@ circuit6 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Miami',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit6,
+    circuit=circuit4,
     nume='Marele Premiu al orasului Miami',
-    runda=6,
+    runda=4,
     data_cursei=date(2026, 5, 3),
 )
 
-# Runda 7 - Canada
-circuit7 = models.Circuit.objects.create(
+# Runda 5 - Canada
+circuit5 = models.Circuit.objects.create(
     nume='Circuit Gilles Villeneuve',
     tara='Canada',
     oras='Montreal',
@@ -151,14 +112,14 @@ circuit7 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Montreal',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit7,
+    circuit=circuit5,
     nume='Marele Premiu al Canadei',
-    runda=7,
+    runda=5,
     data_cursei=date(2026, 5, 24),
 )
 
-# Runda 8 - Monaco
-circuit8 = models.Circuit.objects.create(
+# Runda 6 - Monaco
+circuit6 = models.Circuit.objects.create(
     nume='Circuit de Monaco',
     tara='Monaco',
     oras='Monte Carlo',
@@ -171,14 +132,14 @@ circuit8 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Monaco',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit8,
+    circuit=circuit6,
     nume='Marele Premiu de la Monaco',
-    runda=8,
+    runda=6,
     data_cursei=date(2026, 6, 7),
 )
 
-# Runda 9 - Spania (Barcelona)
-circuit9 = models.Circuit.objects.create(
+# Runda 7 - Spania (Barcelona)
+circuit7 = models.Circuit.objects.create(
     nume='Circuit de Barcelona-Catalunya',
     tara='Spania',
     oras='Barcelona',
@@ -191,14 +152,14 @@ circuit9 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Barcelona',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit9,
-    nume='Marele Premiu al Spaniei',
-    runda=9,
+    circuit=circuit7,
+    nume='Marele Premiu de la Barcelona',
+    runda=7,
     data_cursei=date(2026, 6, 14),
 )
 
-# Runda 10 - Austria
-circuit10 = models.Circuit.objects.create(
+# Runda 8 - Austria
+circuit8 = models.Circuit.objects.create(
     nume='Red Bull Ring',
     tara='Austria',
     oras='Spielberg',
@@ -211,14 +172,14 @@ circuit10 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Spielberg',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit10,
+    circuit=circuit8,
     nume='Marele Premiu al Austriei',
-    runda=10,
+    runda=8,
     data_cursei=date(2026, 6, 28),
 )
 
-# Runda 11 - Marea Britanie
-circuit11 = models.Circuit.objects.create(
+# Runda 9 - Marea Britanie
+circuit9 = models.Circuit.objects.create(
     nume='Silverstone Circuit',
     tara='Marea Britanie',
     oras='Silverstone',
@@ -231,14 +192,14 @@ circuit11 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Silverstone',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit11,
+    circuit=circuit9,
     nume='Marele Premiu al Marii Britanii',
-    runda=11,
+    runda=9,
     data_cursei=date(2026, 7, 5),
 )
 
-# Runda 12 - Belgia
-circuit12 = models.Circuit.objects.create(
+# Runda 10 - Belgia
+circuit10 = models.Circuit.objects.create(
     nume='Circuit de Spa-Francorchamps',
     tara='Belgia',
     oras='Spa',
@@ -251,14 +212,14 @@ circuit12 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Spa',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit12,
+    circuit=circuit10,
     nume='Marele Premiu al Belgiei',
-    runda=12,
+    runda=10,
     data_cursei=date(2026, 7, 19),
 )
 
-# Runda 13 - Ungaria
-circuit13 = models.Circuit.objects.create(
+# Runda 11 - Ungaria
+circuit11 = models.Circuit.objects.create(
     nume='Hungaroring',
     tara='Ungaria',
     oras='Budapesta',
@@ -271,14 +232,14 @@ circuit13 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Budapesta',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit13,
+    circuit=circuit11,
     nume='Marele Premiu al Ungariei',
-    runda=13,
+    runda=11,
     data_cursei=date(2026, 7, 26),
 )
 
-# Runda 14 - Olanda
-circuit14 = models.Circuit.objects.create(
+# Runda 12 - Olanda
+circuit12 = models.Circuit.objects.create(
     nume='Circuit Zandvoort',
     tara='Olanda',
     oras='Zandvoort',
@@ -291,14 +252,14 @@ circuit14 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Zandvoort',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit14,
+    circuit=circuit12,
     nume='Marele Premiu al Olandei',
-    runda=14,
+    runda=12,
     data_cursei=date(2026, 8, 23),
 )
 
-# Runda 15 - Italia
-circuit15 = models.Circuit.objects.create(
+# Runda 13 - Italia
+circuit13 = models.Circuit.objects.create(
     nume='Autodromo Nazionale Monza',
     tara='Italia',
     oras='Monza',
@@ -311,14 +272,14 @@ circuit15 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Monza',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit15,
+    circuit=circuit13,
     nume='Marele Premiu al Italiei',
-    runda=15,
+    runda=13,
     data_cursei=date(2026, 9, 6),
 )
 
-# Runda 16 - Spania (Madrid), circuit nou in 2026
-circuit16 = models.Circuit.objects.create(
+# Runda 14 - Spania (Madrid), circuit nou in 2026
+circuit14 = models.Circuit.objects.create(
     nume='Madring',
     tara='Spania',
     oras='Madrid',
@@ -331,14 +292,14 @@ circuit16 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Madrid',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit16,
-    nume='Marele Premiu al Madridului',
-    runda=16,
+    circuit=circuit14,
+    nume='Marele Premiu al Spaniei',
+    runda=14,
     data_cursei=date(2026, 9, 13),
 )
 
-# Runda 17 - Azerbaidjan
-circuit17 = models.Circuit.objects.create(
+# Runda 15 - Azerbaidjan
+circuit15 = models.Circuit.objects.create(
     nume='Baku City Circuit',
     tara='Azerbaidjan',
     oras='Baku',
@@ -351,14 +312,14 @@ circuit17 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Baku',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit17,
+    circuit=circuit15,
     nume='Marele Premiu al Azerbaidjanului',
-    runda=17,
+    runda=15,
     data_cursei=date(2026, 9, 27),
 )
 
-# Runda 18 - Singapore
-circuit18 = models.Circuit.objects.create(
+# Runda 16 - Singapore
+circuit16 = models.Circuit.objects.create(
     nume='Marina Bay Street Circuit',
     tara='Singapore',
     oras='Singapore',
@@ -371,14 +332,14 @@ circuit18 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Singapore',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit18,
+    circuit=circuit16,
     nume='Marele Premiu de la Singapore',
-    runda=18,
+    runda=16,
     data_cursei=date(2026, 10, 11),
 )
 
-# Runda 19 - Statele Unite (Austin)
-circuit19 = models.Circuit.objects.create(
+# Runda 17 - Statele Unite (Austin)
+circuit17 = models.Circuit.objects.create(
     nume='Circuit of the Americas',
     tara='Statele Unite',
     oras='Austin',
@@ -391,14 +352,14 @@ circuit19 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Austin',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit19,
+    circuit=circuit17,
     nume='Marele Premiu al Statelor Unite',
-    runda=19,
+    runda=17,
     data_cursei=date(2026, 10, 25),
 )
 
-# Runda 20 - Mexic
-circuit20 = models.Circuit.objects.create(
+# Runda 18 - Mexic
+circuit18 = models.Circuit.objects.create(
     nume='Autodromo Hermanos Rodriguez',
     tara='Mexic',
     oras='Ciudad de Mexico',
@@ -411,14 +372,14 @@ circuit20 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Mexico+City',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit20,
+    circuit=circuit18,
     nume='Marele Premiu al orasului Mexico',
-    runda=20,
+    runda=18,
     data_cursei=date(2026, 11, 1),
 )
 
-# Runda 21 - Brazilia
-circuit21 = models.Circuit.objects.create(
+# Runda 19 - Brazilia
+circuit19 = models.Circuit.objects.create(
     nume='Autodromo Jose Carlos Pace (Interlagos)',
     tara='Brazilia',
     oras='Sao Paulo',
@@ -431,14 +392,14 @@ circuit21 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Sao+Paulo',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit21,
+    circuit=circuit19,
     nume='Marele Premiu al orasului Sao Paulo',
-    runda=21,
+    runda=19,
     data_cursei=date(2026, 11, 8),
 )
 
-# Runda 22 - Statele Unite (Las Vegas)
-circuit22 = models.Circuit.objects.create(
+# Runda 20 - Statele Unite (Las Vegas)
+circuit20 = models.Circuit.objects.create(
     nume='Las Vegas Strip Circuit',
     tara='Statele Unite',
     oras='Las Vegas',
@@ -451,14 +412,14 @@ circuit22 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Las+Vegas',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit22,
+    circuit=circuit20,
     nume='Marele Premiu de la Las Vegas',
-    runda=22,
+    runda=20,
     data_cursei=date(2026, 11, 21),
 )
 
-# Runda 23 - Qatar
-circuit23 = models.Circuit.objects.create(
+# Runda 21 - Qatar
+circuit21 = models.Circuit.objects.create(
     nume='Lusail International Circuit',
     tara='Qatar',
     oras='Lusail',
@@ -471,14 +432,14 @@ circuit23 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Lusail',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit23,
+    circuit=circuit21,
     nume='Marele Premiu al Qatarului',
-    runda=23,
+    runda=21,
     data_cursei=date(2026, 11, 29),
 )
 
-# Runda 24 - Emiratele Arabe Unite (Abu Dhabi)
-circuit24 = models.Circuit.objects.create(
+# Runda 22 - Emiratele Arabe Unite (Abu Dhabi)
+circuit22 = models.Circuit.objects.create(
     nume='Yas Marina Circuit',
     tara='Emiratele Arabe Unite',
     oras='Abu Dhabi',
@@ -491,11 +452,11 @@ circuit24 = models.Circuit.objects.create(
     imagine_url='https://placehold.co/600x340/15151e/e10600/png?text=Abu+Dhabi',
 )
 models.MarePremiu.objects.create(
-    circuit=circuit24,
+    circuit=circuit22,
     nume='Marele Premiu de la Abu Dhabi',
-    runda=24,
+    runda=22,
     data_cursei=date(2026, 12, 6),
 )
 
 
-print('Gata! Am adaugat toate cele 24 de circuite in baza de date.')
+print('Gata! Am adaugat toate cele 22 de circuite in baza de date.')
