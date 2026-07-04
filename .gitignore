@@ -7,3 +7,6 @@ db.sqlite3
 # fisiere generate de python
 __pycache__/
 *.pyc
+
+# fisierul cu cheia mea secreta de la openweathermap, nu se urca pe GitHub
+pitcast/cheie_locala.py

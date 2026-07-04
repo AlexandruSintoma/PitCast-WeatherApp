@@ -1,17 +1,15 @@
 PitCast
-=======
+
 
 Aplicatie web facuta in Django care arata vremea de acum la circuitele de
 Formula 1 din sezonul 2026 si o mica poveste despre fiecare circuit.
-Este proiectul meu final de la cursul de Python.
+
 
 
 CE STIE SA FACA
-- Afiseaza toate circuitele din 2026 sub forma de carduri
+- Afiseaza toate circuitele din 2026 sub forma de carduri cu poza fiecarui circuit
 - Are o bara de cautare dupa numele circuitului
-- Pe pagina fiecarui circuit arata: date despre circuit, povestea lui,
-  vremea de acum luata live de la un API extern, marele premiu din 2026
-  si comentariile lasate de vizitatori
+- Pe pagina fiecarui circuit arata: date despre circuit, povestea lui, vremea de acum luata live de la un API extern, marele premiu din 2026 si comentariile lasate de vizitatori
 - Vizitatorii pot lasa un comentariu printr-un formular
 - Se pot adauga circuite noi printr-un formular
 - Are si o pagina cu tot calendarul curselor din 2026

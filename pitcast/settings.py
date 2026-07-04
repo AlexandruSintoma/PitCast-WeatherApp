@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -120,7 +121,12 @@ STATIC_URL = 'static/'
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# aici pun cheia mea de la openweathermap
-# imi fac cont gratis pe openweathermap.org si primesc cheia
-# daca o las goala, site-ul merge dar nu arata vremea
-OPENWEATHER_API_KEY = ''
+# cheia pentru vreme (openweathermap)
+# aici pe GitHub o las goala ca sa nu o vada toata lumea
+# pe calculatorul meu o citesc din fisierul cheie_locala.py (care nu se urca pe GitHub)
+# pe Railway o pun ca variabila de mediu numita OPENWEATHER_API_KEY
+OPENWEATHER_API_KEY = os.environ.get('OPENWEATHER_API_KEY', '')
+try:
+    from .cheie_locala import OPENWEATHER_API_KEY
+except ImportError:
+    pass
