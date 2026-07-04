@@ -15,7 +15,7 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <h4>Date despre circuit</h4>
-                    <p>Lungime: {{ circuit.lungime_km }} km</p>
+                    <p>Lungime: {{ circuit.lungime_km|floatformat:1 }} km</p>
                     <p>Numar de viraje: {{ circuit.numar_viraje }}</p>
                     <p>Prima cursa aici: {{ circuit.an_prima_cursa }}</p>
                 </div>

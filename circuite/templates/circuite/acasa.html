@@ -26,7 +26,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ circuit.nume }}</h5>
                         <p class="card-text">{{ circuit.oras }}, {{ circuit.tara }}</p>
-                        <p class="card-text">Lungime: {{ circuit.lungime_km }} km</p>
+                        <p class="card-text">Lungime: {{ circuit.lungime_km|floatformat:1 }} km</p>
                         <p class="card-text">Viraje: {{ circuit.numar_viraje }}</p>
                         <a href="{% url 'detalii' circuit.id %}" class="btn buton-rosu">Vezi circuitul</a>
                     </div>
