@@ -55,10 +55,13 @@ CUM PORNESC PROIECTUL
 
 NOTA pentru Windows / PowerShell
 Daca la pasul 1 comanda "env\Scripts\activate" iti da o eroare ca scripturile
-sunt blocate, ai doua variante simple:
+sunt blocate, ai trei variante simple:
 - folosesti Command Prompt (cmd) in loc de PowerShell, unde activate merge, SAU
 - nu mai activezi deloc si scrii "env\Scripts\python.exe" in loc de "python" la
-  comenzile de mai sus. Exemplu: env\Scripts\python.exe manage.py runserver
+  comenzile de mai sus. Exemplu: env\Scripts\python.exe manage.py runserver, SAU
+- rulezi o singura data comanda de mai jos in PowerShell (raspunzi cu Y la intrebare),
+  dupa care "activate" merge normal si folosesti comenzile ca in ghid:
+      Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 
 CHEIA PENTRU VREME (OpenWeatherMap)
